@@ -13,6 +13,17 @@ const app = express();
   app.use(express.json());
 
 // ROUTES
+  app.get('/', (req, res) => {
+  res.json({ 
+    message: "API is working!",
+    endpoints: {
+      auth: "/api/auth",
+      users: "/api/role", 
+      allUsers: "/allusers"
+    }
+  });
+});
+
   app.use('/api', authRoutes)   //   /api/auth
   app.use('/api/role', userRoutes)
 
