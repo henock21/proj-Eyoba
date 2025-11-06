@@ -14,7 +14,7 @@ const app = express();
 
 // ROUTES
   app.get('/', (req, res) => {
-  res.send('Hey Homie Sup');
+  res.status(200).send('Hey Homie Sup');
 });         
 
   app.use('/api', authRoutes)   //   /api/auth
@@ -32,5 +32,6 @@ const app = express();
      console.log(`server is running on port ${port}`);
    })
   
+
 
 
