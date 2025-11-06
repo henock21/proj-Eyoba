@@ -11,8 +11,8 @@ const mongoose = require('mongoose');
   catch (err){
     console.log(err);
     process.exit(1);
-  } 
-}       
+  }   
+}          
  
 module.exports = dbConnect;
            //  OR

@@ -6,7 +6,7 @@
  const register = async (req, res) => {
     try{
    const {name, password, role} = req.body;
-   const hashedpassword = await bcrypt.hash(password, 12)
+   const hashedpassword = await bcrypt.hash(password, 12)  
 
    const newUser = new Project({name, password: hashedpassword, role})
    await newUser.save();
